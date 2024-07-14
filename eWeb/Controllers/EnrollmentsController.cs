@@ -42,8 +42,8 @@ namespace eWeb.Controllers
         {
             var courses = await ApiHandler.DeserializeApiResponse<IEnumerable<Course>>(_CoursesURL, HttpMethod.Get);
             var students = await ApiHandler.DeserializeApiResponse<IEnumerable<Student>>(_StudentUrl, HttpMethod.Get);
-            ViewData["CourseId"] = new SelectList(courses, "CourseID", "CourseName");
-            ViewData["StudentId"] = new SelectList(students, "StudentID", "StudentName");
+            ViewData["CourseId"] = new SelectList(courses, "CourseId", "CourseName");
+            ViewData["StudentId"] = new SelectList(students, "StudentId", "StudentName");
             return View();
         }
 
@@ -59,8 +59,8 @@ namespace eWeb.Controllers
             {
                 var coursest = await ApiHandler.DeserializeApiResponse<IEnumerable<Course>>(_CoursesURL, HttpMethod.Get);
                 var studentst= await ApiHandler.DeserializeApiResponse<IEnumerable<Student>>(_StudentUrl, HttpMethod.Get);
-                ViewData["CourseId"] = new SelectList(coursest, "CourseID", "CourseName");
-                ViewData["StudentId"] = new SelectList(studentst, "StudentID", "StudentName");
+                ViewData["CourseId"] = new SelectList(coursest, "CourseId", "CourseName");
+                ViewData["StudentId"] = new SelectList(studentst, "StudentId", "StudentName");
                 ViewBag.Message = "Course and student id already exist";
                 return View(enrollment);
             }
@@ -73,8 +73,8 @@ namespace eWeb.Controllers
 
             var courses = await ApiHandler.DeserializeApiResponse<IEnumerable<Course>>(_CoursesURL, HttpMethod.Get);
             var students = await ApiHandler.DeserializeApiResponse<IEnumerable<Student>>(_StudentUrl, HttpMethod.Get);
-            ViewData["CourseId"] = new SelectList(courses, "CourseID", "CourseName");
-            ViewData["StudentId"] = new SelectList(students, "StudentID", "StudentName");
+            ViewData["CourseId"] = new SelectList(courses, "CourseId", "CourseName");
+            ViewData["StudentId"] = new SelectList(students, "StudentId", "StudentName");
             return View(enrollment);
         }
 
@@ -95,8 +95,8 @@ namespace eWeb.Controllers
 
             var courses = await ApiHandler.DeserializeApiResponse<IEnumerable<Course>>(_CoursesURL, HttpMethod.Get);
             var students = await ApiHandler.DeserializeApiResponse<IEnumerable<Student>>(_StudentUrl, HttpMethod.Get);
-            ViewData["CourseId"] = new SelectList(courses, "CourseID", "CourseName");
-            ViewData["StudentId"] = new SelectList(students, "StudentID", "Address");
+            ViewData["CourseId"] = new SelectList(courses, "CourseId", "CourseName");
+            ViewData["StudentId"] = new SelectList(students, "StudentId", "Address");
             return View(enrollment);
         }
 
@@ -137,8 +137,8 @@ namespace eWeb.Controllers
 
             var courses = await ApiHandler.DeserializeApiResponse<IEnumerable<Course>>(_CoursesURL, HttpMethod.Get);
             var students = await ApiHandler.DeserializeApiResponse<IEnumerable<Student>>(_StudentUrl, HttpMethod.Get);
-            ViewData["CourseId"] = new SelectList(courses, "CourseID", "CourseName");
-            ViewData["StudentId"] = new SelectList(students, "StudentID", "StudentName");
+            ViewData["CourseId"] = new SelectList(courses, "CourseId", "CourseName");
+            ViewData["StudentId"] = new SelectList(students, "StudentId", "StudentName");
             return View(enrollment);
         }
 
